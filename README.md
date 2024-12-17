@@ -45,7 +45,7 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 
 ## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size and to have a shorter model training time. If you are doing an image recognition project, we suggest you consider using an image shape that is 100px × 100px or 50px × 50px, to ensure the model meets the performance requirement but is smaller than 100Mb for a smoother push to GitHub. A reasonably sized image set is ~5000 images, but you can choose ~10000 lines for numeric or textual data. 
+* The dataset used for this project is a survey of software engineers done by stack overflow. The dataset contains over 65000 results submitted by software engineers from around the world, regarding all their information pertaining to a career in said field. Such data includes: role, salary, years of experience, qualifications, gender, ethnicity and so forth. The dataset was found at: https://survey.stackoverflow.co/ and a summary of their results can be found at: https://survey.stackoverflow.co/2024
 
 
 ## Business Requirements
