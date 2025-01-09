@@ -45,7 +45,7 @@ def load_data():
     """
     Loads and cleans the dataset with the same parameters from the notebook.
     """
-    df = pd.read_csv("inputs/developer_salary_survey/survey_results_public.csv")
+    df = pd.read_csv("./inputs/developer_salary_survey/survey_results_public.csv")
     df = df[["Country", "EdLevel", "YearsCodePro", "Employment", "ConvertedCompYearly"]]
     df = df.rename({"ConvertedCompYearly": "Salary"}, axis=1)
     df = df[df["Salary"].notnull()]
