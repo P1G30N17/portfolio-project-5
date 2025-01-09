@@ -40,7 +40,6 @@ pydeck==0.9.1
 pyparsing==3.2.0
 pytz==2024.2
 scikit-learn==1.6.0
-scipy==1.15.0
 seaborn==0.13.0
 setuptools==75.7.0
 smmap==5.0.1
