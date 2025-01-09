@@ -77,13 +77,13 @@ def explore_page_body():
     st.write("""#### Distribution of our Data by Country""")
     st.pyplot(fig1)
     st.info(
-        f"As stated in the summary we can see that the Other Countries category has \n"
-        f"the most Software Engineer Jobs distribution but this should be ignored as \n"
-        f"it is an amalgamation of the remaining 181 countries. \n\n"
-        f"In context to our business model requirements we can clearly see that the \n"
-        f"top three countries with most software engineers are 'United States of \n"
-        f"America', 'Germany' and 'United Kingdom of Great Britain and Northern \n"
-        f"Ireland'. So theoretically these countries should have the best job \n"
+        f"As stated in the summary we can see that the Other Countries category has "
+        f"the most Software Engineer Jobs distribution but this should be ignored as "
+        f"it is an amalgamation of the remaining 181 countries. \n"
+        f"In context to our business model requirements we can clearly see that the "
+        f"top three countries with most software engineers are 'United States of "
+        f"America', 'Germany' and 'United Kingdom of Great Britain and Northern "
+        f"Ireland'. So theoretically these countries should have the best job "
         f"prospects for a new software engineer."
     )
 
@@ -91,14 +91,14 @@ def explore_page_body():
     data = df.groupby(["Country"])["Salary"].mean().sort_values(ascending=True)
     st.bar_chart(data)
     st.info(
-        f"Here we see the average salary for Software Engineers by Country, but it \n"
-        f"should be noted that extreme salary outliers were excluded from the study \n"
-        f"and model, so as to not skew the data but rather give a general inquiry\n"
-        f"into what the majority of software engineers would earn per annum. \n\n"
-        f"From the graph we can clearly see that the best salary on offer would be \n"
-        f"from America', however 'Australia', 'Canada' and 'United Kingdom of \n"
-        f"Great Britain and Northern Ireland' all offer salaries averaging above \n"
-        f"$80000 per annum, making these 4 countries great prospects for a job \n"
+        f"Here we see the average salary for Software Engineers by Country, but it "
+        f"should be noted that extreme salary outliers were excluded from the study "
+        f"and model, so as to not skew the data but rather give a general inquiry "
+        f"into what the majority of software engineers would earn per annum. \n"
+        f"From the graph we can clearly see that the best salary on offer would be "
+        f"from America', however 'Australia', 'Canada' and 'United Kingdom of "
+        f"Great Britain and Northern Ireland' all offer salaries averaging above "
+        f"$80000 per annum, making these 4 countries great prospects for a job "
         f"in softwawre engineering."
     )
 
@@ -106,27 +106,27 @@ def explore_page_body():
     data = df.groupby(["YearsCodePro"])["Salary"].mean().sort_values(ascending=True)
     st.line_chart(data)
     st.info(
-        f"Here we see that years of coding experience has an exponential effect \n"
-        f"on salary growth up to around 13 years, at which point the growth at \n"
-        f"which salary increases begins to decay, but doesn't become negative. \n\n"
-        f"From 32 years of experience and onwards the growth of salaries becomes \n"
-        f"more sporadic. However it still sits comfortably above $100000 per annum \n"
+        f"Here we see that years of coding experience has an exponential effect "
+        f"on salary growth up to around 13 years, at which point the growth at "
+        f"which salary increases begins to decay, but doesn't become negative. \n"
+        f"From 32 years of experience and onwards the growth of salaries becomes "
+        f"more sporadic. However it still sits comfortably above $100000 per annum "
         f"bar one outlier of 47 years of experience."
     )
 
     st.write("""#### Conclusion""")
     st.success(
-        f"With the following information at hand one could quite easily make an \n"
-        f"assumption as to the best long term future and job opportunities for a \n"
-        f"potential new software engineer into the industry. However one would have \n"
-        f"to apply there own living factors to the summary and make their choice that \n"
-        f"best suits them, things like 'Nationality', 'Family', Housing Costs', \n"
-        f"'Work Visas', etc. would all play vital factors in attracting or detracting \n"
-        f"from a new software engineer entering the job market in their chosen country. \n\n"
-        f"So in summary for our business case, the client has access to a British \n"
-        f"and South African Passport, giving us a clear 'Best' option for them, that \n"
-        f"being, that if they so chose, starting a career in Software Engineering in \n"
-        f"Great Britain or Northern Ireland will offer an ample job market and decent \n"
-        f"salary along with good salary growth over the course of their career, meaning \n"
+        f"With the following information at hand one could quite easily make an "
+        f"assumption as to the best long term future and job opportunities for a "
+        f"potential new software engineer into the industry. However one would have "
+        f"to apply there own living factors to the summary and make their choice that "
+        f"best suits them, things like 'Nationality', 'Family', Housing Costs', "
+        f"'Work Visas', etc. would all play vital factors in attracting or detracting "
+        f"from a new software engineer entering the job market in their chosen country. \n"
+        f"So in summary for our business case, the client has access to a British "
+        f"and South African Passport, giving us a clear 'Best' option for them, that "
+        f"being, that if they so chose, starting a career in Software Engineering in "
+        f"Great Britain or Northern Ireland will offer an ample job market and decent "
+        f"salary along with good salary growth over the course of their career, meaning "
         f"they can comfortably provide for their family going forward."
     )
