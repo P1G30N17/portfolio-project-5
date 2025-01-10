@@ -68,14 +68,25 @@ df = load_data()
 def explore_page_body():
     st.write("### The Global Software Engineer Job Market as of 2024")
 
+    # Dropping other so as to not distort the upper determinants
     data = df["Country"].value_counts().drop("Other")
 
-    fig1, ax1 = plt.subplots()
-    ax1.pie(data, labels=data.index, autopct="%1.1f%%", startangle=90)
+    # Creating pie chart
+    fig, ax1 = plt.subplots()
+    ax1.pie(
+        data, labels=data.index, autopct="%1.1f%%", pctdistance=0.85
+        )
     ax1.axis("equal")
 
+    # Draw circle
+    centre_circle = plt.Circle((0, 0), 0.70, fc='white')
+    fig = plt.gcf()
+ 
+    # Adding Circle in Pie chart
+    fig.gca().add_artist(centre_circle)
+
     st.write("""#### Distribution of our Data by Country""")
-    st.pyplot(fig1)
+    st.pyplot(fig)
     st.info(
         f"As stated in the summary we have removed the Other Countries category as it "
         f"makes up 15.9% of Software Engineer Jobs distribution but this should be "
@@ -89,6 +100,7 @@ def explore_page_body():
     )
 
     st.write("""#### Average Salary in $USD by Country for Software Engineers""")
+    # Creating bar chart
     data = df.groupby(["Country"])["Salary"].mean().sort_values(ascending=True)
     st.bar_chart(data)
     st.info(
@@ -104,6 +116,7 @@ def explore_page_body():
     )
 
     st.write("""#### Average Salary in $USD by Years of Experience for Software Engineers""")
+    # Creating line graph
     data = df.groupby(["YearsCodePro"])["Salary"].mean().sort_values(ascending=True)
     st.line_chart(data)
     st.info(

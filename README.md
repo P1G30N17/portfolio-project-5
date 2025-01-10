@@ -77,7 +77,7 @@ From this we will attempt to look for any correlation and attempt to extrapolate
 
 - Project exploration
     - Business requirement 1: The client is interested in having a study to investigate the best location (Country with most jobs) for a potential job in the software engineering market
-        - A Pie chart and relevant explanation of the distribution of jobs by country.
+        - A Donut chart and relevant explanation of the distribution of jobs by country.
         - A bar chart and relevant explanation of the average salary per country.
     - Business requirement 2: The client is interested in determining whether experience in the software engineering industry affects potential salary
         - A line chart showing the average salary by years of experience.
