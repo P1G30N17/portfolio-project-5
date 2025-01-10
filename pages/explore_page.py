@@ -39,8 +39,8 @@ def clean_education(x):
     return 'Less than a Bachelor’s'
 
 
-# To speed up load times the decorator @st.cache_data would be used here however it is causing
-# streamlit.errors.StreamlitSetPageConfigMustBeFirstCommandError
+# To speed up load times
+st.cache_data
 def load_data():
     """
     Loads and cleans the dataset with the same parameters from the notebook.
@@ -53,7 +53,7 @@ def load_data():
     df = df[df["Employment"] == "Employed, full-time"]
     df = df.drop("Employment", axis=1)
 
-    country_map = shorten_categories(df.Country.value_counts(), 400)
+    country_map = shorten_categories(df.Country.value_counts(), 100)
     df['Country'] = df['Country'].map(country_map)
     df = df[df["Salary"] <= 250000]
     df = df[df["Salary"] >= 10000]
@@ -68,7 +68,7 @@ df = load_data()
 def explore_page_body():
     st.write("### The Global Software Engineer Job Market as of 2024")
 
-    data = df["Country"].value_counts()
+    data = df["Country"].value_counts().drop("Other")
 
     fig1, ax1 = plt.subplots()
     ax1.pie(data, labels=data.index, autopct="%1.1f%%", startangle=90)
@@ -77,9 +77,10 @@ def explore_page_body():
     st.write("""#### Distribution of our Data by Country""")
     st.pyplot(fig1)
     st.info(
-        f"As stated in the summary we can see that the Other Countries category has "
-        f"the most Software Engineer Jobs distribution but this should be ignored as "
-        f"it is an amalgamation of the remaining 181 countries. \n"
+        f"As stated in the summary we have removed the Other Countries category as it "
+        f"makes up 15.9% of Software Engineer Jobs distribution but this should be "
+        f"ignored as it is an amalgamation of the remaining 164 countries that did not "
+        f"meet the dataset requirement of each country having over 100 entries. \n"
         f"In context to our business model requirements we can clearly see that the "
         f"top three countries with most software engineers are 'United States of "
         f"America', 'Germany' and 'United Kingdom of Great Britain and Northern "
@@ -96,10 +97,10 @@ def explore_page_body():
         f"and model, so as to not skew the data but rather give a general inquiry "
         f"into what the majority of software engineers would earn per annum. \n"
         f"From the graph we can clearly see that the best salary on offer would be "
-        f"from America', however 'Australia', 'Canada' and 'United Kingdom of "
-        f"Great Britain and Northern Ireland' all offer salaries averaging above "
-        f"$80000 per annum, making these 4 countries great prospects for a job "
-        f"in softwawre engineering."
+        f"from America', however 'Australia', 'Canada', 'Denmark', 'Israel', "
+        f"'Switzerland', and 'United Kingdom of Great Britain and Northern "
+        f"Ireland' all offer salaries averaging above $85000 per annum, making "
+        f"these 7 countries great prospects for a job in softwawre engineering."
     )
 
     st.write("""#### Average Salary in $USD by Years of Experience for Software Engineers""")
@@ -124,7 +125,7 @@ def explore_page_body():
         f"'Work Visas', etc. would all play vital factors in attracting or detracting "
         f"from a new software engineer entering the job market in their chosen country. \n"
         f"So in summary for our business case, the client has access to a British "
-        f"and South African Passport, giving us a clear 'Best' option for them, that "
+        f"and South African Nationality, giving us a clear 'Best' option for them, that "
         f"being, that if they so chose, starting a career in Software Engineering in "
         f"Great Britain or Northern Ireland will offer an ample job market and decent "
         f"salary along with good salary growth over the course of their career, meaning "
