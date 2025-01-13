@@ -88,6 +88,9 @@ From this we will attempt to look for any correlation and attempt to extrapolate
 - A block describing the project hypothesis as described in the hypothesis subsection.
 - A block with the project hypothesis verdict.
 
+### Technical Page
+
+- A technical page displaying the model performance, and the various steps taken.
 
 ## Unfixed Bugs
 * None

@@ -3,7 +3,7 @@ import streamlit as st
 def summary_page_body():
     st.write("### Project Summary")
     st.info(
-        f"**General Information**\n"
+        f"**General Information** \n"
         f"The Software industry is a global booming market, it would only be fair to assume that jobs within this "
         f"market would be too. This project aims to give a brief insight into this growing market with an "
         f"investiagtion into the availability of Software Engineering jobs, their associated salary and which "
