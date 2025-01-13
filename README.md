@@ -114,6 +114,10 @@ From this we will attempt to look for any correlation and attempt to extrapolate
 - We want an ML model to predict average salary per annum. We consider a linear regression model, which is supervised and uni-dimensional.
 - As stated earlier we want a deviation of no more than $35000, however this was not the case and so we attempted a different model.
 
+### Logistic Regression
+- We want an ML model to predict average salary per annum. We consider a logistic regression model,which is a statistical model that predicts the probability of a binary outcome based on one or more predictor variables.
+- As stated earlier we want a deviation of no more than $35000, however this was not the case and so we attempted a different model.
+
 ### Decision Tree Regression
 - We want an ML model to predict average salary per annum. We consider a decision tree regression model, which is supervised and has a continuos output.
 - The deviation was within the set acceptable amount however not by much, so we wished to see if we could get a lower results from other models.
@@ -129,22 +133,12 @@ From this we will attempt to look for any correlation and attempt to extrapolate
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+- Help and coding assisstance was taken from the Code Institute Data analytics course material.
+- Code was used and adapted from the Code Institute Malaria Detector tutorial project [Walkthrough Project 1](https://github.com/Code-Institute-Solutions/WalkthroughProject01)
+- Code was used and adapted from the Code Institute Churnometer tutorial project [Churnometer](https://github.com/Code-Institute-Solutions/churnometer)
+- Inspiration, Code and coding teaching/explaining taken from [Predict NFL Touchdowns - Create Your First Predictive Model in Python (Step by Step Tutorial)](https://www.youtube.com/watch?v=3IA0V9UuoPc) - from [Nick Wan](https://www.youtube.com/@NickWan) on Youtube.
+- Inspiration, Code and coding teaching/explaining taken from [Build A Machine Learning Web App From Scratch](https://www.youtube.com/watch?v=xl0N7tHiwlw) - from [Patrick Loeber](https://www.youtube.com/@patloeber) on Youtube.
+- Inspiration, Code and coding teaching/explaining taken from [First Machine Learning Program with Python / Jupyter](https://www.youtube.com/watch?v=LGHIPdFwn2k) - from [Praveen Kumar](https://www.youtube.com/@PraveenKumar2022) on Youtube.
+- Model explanations and definitions taken and adapted from [SciKit Learn](https://scikit-learn.org/stable/index.html)
 
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
-
-## Acknowledgements (optional)
-* Thank the people who provided support through this project.
 
