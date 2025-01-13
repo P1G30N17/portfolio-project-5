@@ -40,6 +40,7 @@ def predict_salary_page_body():
         "Less than a Bachelor’s"
     )
 
+    # Code Credit Patrick Loeber
     country = st.selectbox("Country of Job Location", countries)
     ed_level = st.selectbox("Highest Education Qualification", education)
     experience = st.slider("Years of Experience in Software Engineering/Developer Industry", 0, 50, 1)
